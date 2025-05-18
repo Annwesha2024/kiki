@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Card for Alsinaa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fceef4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff92b2;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff6e99;
+    }
+
+    .card {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 400px;
+      background-color: #fff0f5;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: popIn 0.5s ease forwards;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    .card h2 {
+      color: #d63384;
+      font-size: 1.8rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #4b4b4b;
+      margin: 1rem 0;
+    }
+
+    .close-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: #c0206d;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showCard()">🎉 Open Birthday Card</button>
+
+  <div class="card" id="birthdayCard">
+    <h2>Happy 20th Birthday, Alsinaa! 🎂💖</h2>
+    <p>
+      Welcome to the fabulous 20s! ✨ May your year be full of laughter, sweet surprises, and magical memories 🌈💐
+      You're loved more than you know! Keep shining bright! 🌟
+    </p>
+    <button class="close-btn" onclick="closeCard()">Close</button>
+  </div>
+  <a href="album.html"><button>Click Me Dhanshiri🌻</button></a>
+
+
+  <script>
+    function showCard() {
+      document.getElementById("birthdayCard").style.display = "block";
+    }
+
+    function closeCard() {
+      document.getElementById("birthdayCard").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
